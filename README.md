@@ -3,6 +3,9 @@
 A beginner-friendly Go checkout API with a small HTML, CSS, and JavaScript page.
 The API validates a cart and an optional coupon, then returns an itemized quote.
 
+Read [How it works](docs/HOW_IT_WORKS.md) for a beginner-friendly walkthrough of
+the request flow, validation, coupon calculations, and frontend behavior.
+
 ## Run
 
 Requires **Go 1.22 or newer**. No database, npm install, or API keys are needed.
@@ -48,6 +51,7 @@ checkout-api/
 │   ├── styles.css              Responsive styling
 │   ├── app.js                  Cart interactions and API calls
 │   └── assets/                 Product illustrations
+├── docs/HOW_IT_WORKS.md        Step-by-step explanation of the application
 ├── go.mod                      Module name and minimum Go version
 └── README.md
 ```
