@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#dce1d5"/><stop offset="1" stop-color="#c7d1be"/></linearGradient>
+    <linearGradient id="cover" x2="1" y2="1"><stop stop-color="#718168"/><stop offset="1" stop-color="#536b50"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h400v340H0z"/>
+  <ellipse cx="207" cy="271" rx="95" ry="16" fill="#4b6043" opacity=".18" filter="url(#shadow)"/>
+  <g transform="rotate(-12 200 170)">
+    <rect x="127" y="62" width="151" height="218" rx="6" fill="#536447"/>
+    <rect x="130" y="65" width="146" height="211" rx="3" fill="#ede8d6"/>
+    <path d="M135 269h140M135 272h140" stroke="#d4ceb9"/>
+    <rect x="122" y="57" width="151" height="213" rx="5" fill="url(#cover)"/>
+    <path d="M135 58v211" stroke="#a3b095" stroke-opacity=".5"/>
+    <path d="M251 58v211" stroke="#384e35" stroke-width="4" opacity=".75"/>
+    <text x="193" y="147" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#e6e8d4" letter-spacing="3">DAILY</text>
+    <text x="193" y="165" text-anchor="middle" font-family="sans-serif" font-size="5" fill="#dce1cc" letter-spacing="2.3">ROOM FOR THOUGHT</text>
+    <path d="M177 219h31" stroke="#bbc8a8" stroke-width=".7"/>
+    <path d="M226 272v18l-6-4-6 4v-18" fill="#b59c6c"/>
+  </g>
+</svg>

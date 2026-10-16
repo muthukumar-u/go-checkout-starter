@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4ef" />
+    <meta name="description" content="Thoughtful objects for your everyday. Build your cart and find a little something off at Form & Field." />
+    <title>Your bag · Form & Field</title>
+    <link rel="icon" href="./assets/notebook.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">A little more intention. A little less ordinary.</div>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Form and Field home">form <span>&</span> field<span class="wordmark-dot">®</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#collection">The collection <span aria-hidden="true">↗</span></a>
+        <a href="#bag" class="bag-link">Your bag <span id="header-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="breadcrumb"><a href="#collection">The collection</a><span aria-hidden="true">/</span><span>Your bag</span></div>
+      <section class="page-heading" aria-labelledby="page-title">
+        <div><p class="eyebrow">GOOD THINGS, GATHERED.</p><h1 id="page-title">Your everyday,<br />a little <em>better.</em></h1></div>
+        <p>Thoughtful objects. Simple pleasures.<br />A few good things to make your own.</p>
+      </section>
+
+      <div id="page-error" class="page-error" role="alert" hidden></div>
+      <noscript><p class="page-error">Please enable JavaScript to load products and calculate your cart. The API also works directly with curl; see the README.</p></noscript>
+
+      <div class="checkout-layout">
+        <section id="bag" class="bag-panel" aria-labelledby="bag-heading">
+          <div class="section-heading"><h2 id="bag-heading">In your bag <span id="item-count">—</span></h2><span class="small-note">A good place to start.</span></div>
+          <div class="cart-columns" aria-hidden="true"><span>PRODUCT</span><span>QUANTITY</span><span>TOTAL</span></div>
+          <div id="cart-items" aria-live="polite"><p class="loading">Gathering the good things…</p></div>
+          <a class="continue-link" href="#collection"><span aria-hidden="true">←</span> Keep exploring</a>
+          <div class="bag-note"><span class="leaf-icon" aria-hidden="true">✳</span><p><strong>Less, but more considered.</strong><br />Useful things, chosen with care. That’s our kind of everyday.</p></div>
+        </section>
+
+        <aside class="summary" aria-labelledby="summary-heading">
+          <div class="summary-top"><span class="eyebrow">THE LITTLE DETAILS</span><span aria-hidden="true">↗</span></div>
+          <h2 id="summary-heading">Order summary</h2>
+          <div id="totals" aria-live="polite" aria-busy="true">
+            <dl class="totals-list"><div><dt>Subtotal</dt><dd id="subtotal">—</dd></div><div id="discount-row" hidden><dt>Discount <span id="discount-code"></span></dt><dd id="discount">—</dd></div><div><dt>Delivery</dt><dd class="delivery">On us</dd></div></dl>
+            <div class="grand-total"><span>Total <small>INR</small></span><strong id="total">—</strong></div>
+          </div>
+          <form id="coupon-form" novalidate>
+            <label for="coupon-code">A little something off?</label>
+            <div class="coupon-input"><input id="coupon-code" name="coupon_code" maxlength="40" placeholder="Enter coupon code" autocomplete="off" spellcheck="false" aria-describedby="coupon-message" /><button id="apply-coupon" type="submit" disabled>Apply <span aria-hidden="true">→</span></button></div>
+            <p id="coupon-message" class="coupon-message" aria-live="polite"></p>
+            <button id="remove-coupon" type="button" class="text-button" hidden>Remove coupon</button>
+          </form>
+          <div id="offers" class="offers"><p>GOOD THINGS COME WITH PERKS</p><div id="coupon-offers"></div></div>
+          <button id="review-button" class="review-button" type="button" disabled>Review your order <span aria-hidden="true">↗</span></button>
+          <p class="demo-note"><svg viewBox="0 0 20 20" width="12" height="12" fill="none" stroke="currentColor" aria-hidden="true"><rect x="5" y="8" width="10" height="9" rx="2" /><path d="M7 8V5a3 3 0 0 1 6 0v3" /></svg> A demo checkout. No payment collected.</p>
+        </aside>
+      </div>
+
+      <section id="collection" class="collection" aria-labelledby="collection-heading">
+        <div class="collection-heading"><div><p class="eyebrow">MAKE ROOM FOR THE EVERYDAY</p><h2 id="collection-heading">Good company for your desk.</h2></div><span class="small-note">A small, considered collection.</span></div>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+    </main>
+    <footer><a class="wordmark footer-wordmark" href="./">form <span>&</span> field</a><p>Objects for a slower, more thoughtful everyday.</p><span>Made for the little moments. © 2026</span></footer>
+
+    <dialog id="review-dialog" aria-labelledby="review-title">
+      <button id="close-review" class="close-dialog" aria-label="Close order review">×</button>
+      <p class="eyebrow">A FEW GOOD THINGS</p><h2 id="review-title">Looking good.</h2>
+      <p class="review-intro">Here’s your order estimate, freshly calculated.</p>
+      <div id="review-items"></div><div class="review-total"><span>Estimated total</span><strong id="review-total"></strong></div>
+      <p class="review-discount" id="review-discount"></p>
+      <p class="review-disclaimer">This is a checkout demonstration. Reviewing a quote does not place an order, reserve stock, or collect payment.</p>
+      <button id="back-to-bag" class="review-button" type="button">Back to your bag <span aria-hidden="true">←</span></button>
+    </dialog>
+  </body>
+</html>
